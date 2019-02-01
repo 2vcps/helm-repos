@@ -1,5 +1,5 @@
 apiVersion: v1
-entries: 
+entries:
   gb-chart:
   - apiVersion: v1
     appVersion: "1.0"
@@ -8,6 +8,6 @@ entries:
     digest: 11ee4302e6c6ccc70c7dbb6f06ded5507f60e8548708b2723d4c1e90e18176ca
     name: gb-chart
     urls:
-    - gb-chart/gb-chart-0.1.1.tgz
+    - gb-chart-0.1.1.tgz
     version: 0.1.1
-generated: 2019-02-01T10:08:38.995600893-05:00
+generated: 2019-02-01T10:25:13.946260281-05:00
