@@ -1,10 +1,11 @@
 # Default values for gb-chart.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-
+#what storage do you want? pure-block = FlashArray pure-file = FlashBlade
 persistence:
    storageClass: pure-block
 
+# maps to the failure domain label on the nodes and the storage
 zones:
   enabled: false
   zoneName: somezone
