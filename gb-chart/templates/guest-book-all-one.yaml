@@ -33,6 +33,16 @@ spec:
         role: master
         tier: backend
     spec:
+    {{- if .Values.zones.enabled }}
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                - key: "failure-domain.beta.kubernetes.io/zone"
+                  operator: In
+                  values: [{{ .Values.zones.zoneName }}]
+    {{- end }}
       containers:
       - name: master
         image: k8s.gcr.io/redis:e2e  # or just image: redis
@@ -84,6 +94,16 @@ spec:
         role: slave
         tier: backend
     spec:
+    {{- if .Values.zones.enabled }}
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                - key: "failure-domain.beta.kubernetes.io/zone"
+                  operator: In
+                  values: [{{ .Values.zones.zoneName }}]
+    {{- end }}
       containers:
       - name: slave
         image: gcr.io/google_samples/gb-redisslave:v1
@@ -140,6 +160,16 @@ spec:
         app: guestbook
         tier: frontend
     spec:
+    {{- if .Values.zones.enabled }}
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                - key: "failure-domain.beta.kubernetes.io/zone"
+                  operator: In
+                  values: [{{ .Values.zones.zoneName }}]
+    {{- end }}
       containers:
       - name: php-redis
         image: gcr.io/google-samples/gb-frontend:v4

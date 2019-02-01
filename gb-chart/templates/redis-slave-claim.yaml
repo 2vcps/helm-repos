@@ -5,6 +5,13 @@ metadata:
   annotations:
     volume.beta.kubernetes.io/storage-class: {{ .Values.persistence.storageClass }}
 spec:
+{{- if .Values.zones.enabled }}
+  selector:
+        matchExpressions:
+        - key: "failure-domain.beta.kubernetes.io/zone"
+          operator: In
+          values: [{{ .Values.zones.zoneName }}]
+{{- end }}
   accessModes:
     - ReadWriteOnce
   resources:

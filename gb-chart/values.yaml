@@ -4,3 +4,7 @@
 
 persistence:
    storageClass: pure-block
+
+zones:
+  enabled: false
+  zoneName: somezone

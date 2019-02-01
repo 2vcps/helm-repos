@@ -3,11 +3,11 @@ entries:
   gb-chart:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-02-01T10:25:13.947293123-05:00
+    created: 2019-02-01T11:14:50.757946574-05:00
     description: Guestbook Demo with PVC
-    digest: 11ee4302e6c6ccc70c7dbb6f06ded5507f60e8548708b2723d4c1e90e18176ca
+    digest: c090f0fd5fab7e01c30d3f4680dbb83d3ab4bec8bb650da19bdb970fc32bedb4
     name: gb-chart
     urls:
     - gb-chart-0.1.1.tgz
     version: 0.1.1
-generated: 2019-02-01T10:25:13.946260281-05:00
+generated: 2019-02-01T11:14:50.75693917-05:00
