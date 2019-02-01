@@ -1,0 +1,13 @@
+categories:
+- demo
+- data
+questions:
+- variable: persistence.storageCLass
+  default: "pure-block"
+  description: "Enable Pure Storage"
+  type: boolean
+  required: true
+  label: StorageClass for Persistent Volumes
+  show_subquestion_if: true
+  group: "Guest Book Settings"
+  
