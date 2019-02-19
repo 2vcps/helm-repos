@@ -8,6 +8,6 @@ entries:
     icon: https://github.com/purestorage/helm-charts/tree/master/pure-k8s-plugin/pure-storage.png
     name: pure-k8s-plugin
     urls:
-    - pure-k8s-plugin/pure-k8s-plugin-2.2.1.tgz
+    - pure-k8s-plugin-2.2.1.tgz
     version: 2.2.1
 generated: 2019-02-19T11:06:21.064821792-05:00
