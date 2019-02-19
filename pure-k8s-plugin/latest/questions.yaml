@@ -1,7 +1,7 @@
 categories:
-- Blog
-- CMS
-questions:d
+- Plugins
+- Stuff
+questions:
 - variable: FlashArrays
   default: "true"
   description: "Use default image of K8s"
