@@ -1,0 +1,10 @@
+namespace:
+  pure: demo
+arrays:
+  FlashArrays:
+    - MgmtEndPoint: "10.21.230.28"
+      APIToken: "3863412d-c8c9-64be-e7f5-1ef8b4d7b221"
+      Labels: {}
+    - MgmtEndPoint: "10.21.230.24"
+      APIToken: "e0770d27-adfd-a46b-42fa-0c3ebb5e4356"
+      Labels: {}
