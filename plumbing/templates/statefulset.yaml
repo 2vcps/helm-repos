@@ -39,7 +39,7 @@ spec:
     {{- end }}
       containers:
       - name: vdbench
-        image: jowings/vdbench:0.8.5
+        image: jowings/vdbench:0.8.6
         ports:
         - containerPort: 22
           name: vdbench
