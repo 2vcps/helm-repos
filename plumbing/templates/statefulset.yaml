@@ -63,7 +63,7 @@ spec:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: vdbench-east
+  name: vdbench
 spec:
   serviceName: "vdbench"
   replicas: 16
@@ -75,6 +75,7 @@ spec:
       labels:
         app: vdbench
     spec:
+    {{- if .Values.zones.enabled }}
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -82,7 +83,8 @@ spec:
               - matchExpressions:
                 - key: "failure-domain.beta.kubernetes.io/zone"
                   operator: In
-                  values: ["EAST"]
+                  values: [{{ .Values.zones.zoneName }}]
+    {{- end }}
       containers:
       - name: vdbench-east
         image: jowings/vdbench:0.8.3
@@ -90,19 +92,21 @@ spec:
         - containerPort: 22
           name: vdbench
         volumeMounts:
-        - name: workload-data-east
+        - name: workload-data
           mountPath: /datadir1
   volumeClaimTemplates:
   - metadata:
-      name: workload-data-east
+      name: workload-data
       annotations:
         volume.beta.kubernetes.io/storage-class: pure-block
     spec:
+    {{- if .Values.zones.enabled }}
       selector:
         matchExpressions:
         - key: "failure-domain.beta.kubernetes.io/zone"
           operator: In
-          values: ["EAST"]
+          values: [{{ .Values.zones.zoneName }}]
+     {{- end }}
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
