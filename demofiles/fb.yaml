@@ -8,4 +8,4 @@ persistence:
 # maps to the failure domain label on the nodes and the storage
 zones:
   enabled: false
-  zoneName: somezone
+  zoneName: somezonekube

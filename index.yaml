@@ -10,4 +10,14 @@ entries:
     urls:
     - gb-chart/gb-chart-0.1.1.tgz
     version: 0.1.1
+  plumbing:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-05-01T08:48:41.237650853-06:00
+    description: DaemonSet for plumbing
+    digest: d3f454d36cc86811bf84b3191d31b4730c2ae0498c4c072b1386bae15037a385
+    name: plumbing
+    urls:
+    - gb-chart/plumbing-0.1.tgz
+    version: "0.1"
 generated: 2019-02-01T11:14:50.75693917-05:00

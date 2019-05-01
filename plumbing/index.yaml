@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  plumbing:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-05-01T08:48:41.237650853-06:00
+    description: DaemonSet for plumbing
+    digest: d3f454d36cc86811bf84b3191d31b4730c2ae0498c4c072b1386bae15037a385
+    name: plumbing
+    urls:
+    - plumbing-0.1.tgz
+    version: "0.1"
+generated: 2019-05-01T08:48:41.235882631-06:00
