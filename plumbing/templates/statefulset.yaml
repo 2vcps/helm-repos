@@ -38,8 +38,8 @@ spec:
                   values: [{{ .Values.zones.zoneName }}]
     {{- end }}
       containers:
-      - name: vdbench-east
-        image: jowings/vdbench:0.8.3
+      - name: vdbench
+        image: jowings/vdbench:0.8.5
         ports:
         - containerPort: 22
           name: vdbench
