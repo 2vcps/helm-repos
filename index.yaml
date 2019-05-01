@@ -18,7 +18,7 @@ entries:
     digest: 39733d9e449edfe1ec3cd8c4d91bddd4fa8d0ec1d559911da4c7baf36bdca3f4
     name: plumbing
     urls:
-    - plumbing-0.1.1.tgz
+    - plumbing/plumbing-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
