@@ -18,6 +18,6 @@ entries:
     digest: d3f454d36cc86811bf84b3191d31b4730c2ae0498c4c072b1386bae15037a385
     name: plumbing
     urls:
-    - gb-chart/plumbing-0.1.tgz
+    - plumbing/plumbing-0.1.tgz
     version: "0.1"
 generated: 2019-02-01T11:14:50.75693917-05:00
